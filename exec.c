@@ -10,7 +10,7 @@ int execute(char **cmd)
   pid_t child_pid;
   int status;
   
-  if (strncmp("exit", cmd[0], 4) == 0)
+  if (_strncmp("exit", cmd[0], 4) == 0)
     return (-1);
   
   child_pid = fork();

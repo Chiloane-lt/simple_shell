@@ -13,21 +13,31 @@ int main(int argc, char *argv[])
 	char *command;
 	char *str = "exit\n";
 
-	/*print prompt*/
-	PS1();
+	do {
+		/*print prompt*/
+		PS1();
 
-	/*read input command*/
-	command = read_cmd();
+		/*read input command*/
+		command = read_cmd();
 
-	if(!command)
-	{
-		exit(EXIT_SUCCESS);
-	}
+		/*check if no input*/
+		if(!command)
+		{
+			exit(EXIT_SUCCESS);
+		}
 
-	/*close shell if input command is "exit"*/
-	if (_strcmp(command, str) == 1)
-	{
+		/*close shell if input command is "exit"*/
+		if (_strcmp(command, str) == 1)
+		{
+			free(command);
+			break;
+		}
+
+		_puts(command);
+
 		free(command);
-		break;
-	}
+
+	}while(1);
+
+	exit(EXIT_SUCCESS);
 }

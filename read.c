@@ -11,6 +11,7 @@
 char *read_cmd(void)
 {
 	char *command = NULL;
+	char *newline = "\n";
 	size_t size = 0;
 	ssize_t res;
 
@@ -23,12 +24,12 @@ char *read_cmd(void)
 	}
 
 	/*check if input is EOF (Ctrl + D) or ENTER*/
-	if (command == EOF || command == '\n')
+	if (feof(stdin) || _strcmp(command, newline) == 1)
 	{
 		/*restart process i.e. print pointer*/
 		exit(EXIT_SUCCESS);
 	}
-	else if (command == -1)
+	else if (res == -1)
 	{
 		exit(EXIT_FAILURE); /*Needs revision*/
 	}
