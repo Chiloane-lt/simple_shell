@@ -1,23 +1,23 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
- * PS1 - Prints $ prompter to stdout
+ * pointer - Prints $ prompter to stdout
  * Return: None. Always vid.
  *
  */
 
-void PS1(void)
+void pointer(void)
 {
-	_putchar('$');
-}
-
-/**
- * PS2 - Prints > interactive mode
- * Return: none. always void.
- *
- */
-
-void PS2(void)
-{
-	_putchar('>');
+	/*Interactive mode*/
+	if (isatty(STDIN_FILENO))
+	{
+		char *ptr = "($)";
+		_puts(ptr);
+	}
+	else
+	{
+		/*non-interactive mode*/
+		_putchar('$');
+	}
 }

@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	do {
 		/*print prompt*/
-		PS1();
+		pointer();
 
 		/*read input command*/
 		command = read_cmd();
