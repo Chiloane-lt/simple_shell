@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <string.h>
 
 /*Functions to handel strings*/
 void _puts(char *str);
@@ -20,6 +21,7 @@ char *_memset(char *s, char b, unsigned int n);
 void *_calloc(unsigned int nmemb, int size);
 
 int execute(char **cmd);
+char **tokenise(char *command);
 char *read_cmd(void);
 void pointer(void);
 #endif

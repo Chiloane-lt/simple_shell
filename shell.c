@@ -15,6 +15,7 @@
 int main(int argc, char *argv[])
 {
 	char *command;
+	char **cmd;
 	char *str = "exit\n";
 
 	do {
@@ -36,6 +37,8 @@ int main(int argc, char *argv[])
 			free(command);
 			break;
 		}
+
+		cmd = tokenise(command);
 
 		free(command);
 
