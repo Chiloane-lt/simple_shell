@@ -1,6 +1,6 @@
 #include "main.h"
 
-void _strtok(char *command)
+char **_strtok(char *command)
 {
 	/*To store tokens in **tokens*/
 	size_t bufsize = 1024;
@@ -25,12 +25,16 @@ void _strtok(char *command)
 		printf("Token: %s\n", token);
 		token = strtok(NULL, delim);
 		tokens[i] = token;
-		
+
 		printf("This is stored index of token: %p\n", tokens);
 
 		i++;
 	}
+
+	tokens[i] = NULL;
+	return (tokens);
 }
+
 int main()
 {
 	char cmd[] = "This is totally stupid!";

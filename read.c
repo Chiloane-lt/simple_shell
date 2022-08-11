@@ -4,11 +4,11 @@
 
 
 /**
- * read_cmd - Reads and checks if user input is a linux cmd
+ * reader - Reads and checks if user input is a linux cmd
  * Return: TBD.
  */
 
-char *read_cmd(void)
+char *reader(void)
 {
 	char *command = NULL;
 	char *newline = "\n";

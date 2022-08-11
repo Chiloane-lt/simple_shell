@@ -1,37 +1,42 @@
 #include "main.h"
 
 /**
-* main - main simple shell
-* @argc: number of arguments
-* @argv: list of command line arguments
-* Return: Always 0 (Success)
-*/
+ * tokenise - Parses a string into tokens given string pointer
+ * @command: Comandline input to parse
+ * Return: double character pointer to buffer
+ */
 char **tokenise(char *command)
 {
-	int i;
-	char **tokens;
-	size_t bufsize = 1024;
- 	char *buffer;
-	char *delim = " ";
-	
-	tokens = malloc(sizeof(char *) * bufsize);
+	/**ERROR: Segmentation Fault*/
+	/* Cause: fails given pointer. Only works*/
+	/* given a literal string and a pointer to that*/
+	/*Solution: Make read function output string proper*/
 
-	/*check malloc*/
+	/*To store tokens in **tokens*/
+	size_t bufsize = 1024;
+	char **tokens = malloc(sizeof(char *) * bufsize);
+	int i;
+
+	char *token;
+
+	/*test malloc**/
 	if (!tokens)
 	{
-		perror("Memory Allocation Fail:");
-		exit(EXIT_FAILURE);
+		printf("Didn't allocate memory");
 	}
 
-	/*Break into tokens using strtok & insert into buffer*/
-	buffer = strtok(command, delim);
-	/*Track position in buffer & insert pointers to tokens*/
-	for (i = 0; buffer != NULL, i++;)
+
+	char delim[] = " ";
+
+	tokien = strtok(command, delim);
+
+	while (token != NULL)
 	{
-		tokens[i] = buffer;
-		printf("I am inside!");
-	}
+		token = strtok(NULL, delim);
+		tokens[i] = token;
 
+		i++;
+	}
 	tokens[i] = NULL;
 
 	return (tokens);

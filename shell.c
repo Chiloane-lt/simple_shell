@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		pointer();
 
 		/*read input command*/
-		command = read_cmd();
+		command = reader();
 
 		/*check if no input*/
 		if (!command)
@@ -38,7 +38,8 @@ int main(int argc, char *argv[])
 			break;
 		}
 
-		cmd = tokenise(command);
+		/*tokenise(command);*/
+		/*execute here*/
 
 		free(command);
 

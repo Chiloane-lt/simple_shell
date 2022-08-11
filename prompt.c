@@ -13,6 +13,7 @@ void pointer(void)
 	if (isatty(STDIN_FILENO) == 1)
 	{
 		char *ptr = "($)";
+
 		_puts(ptr);
 	}
 	else

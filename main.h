@@ -22,6 +22,6 @@ void *_calloc(unsigned int nmemb, int size);
 
 int execute(char **cmd);
 char **tokenise(char *command);
-char *read_cmd(void);
+char *reader(void);
 void pointer(void);
 #endif
