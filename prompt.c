@@ -1,13 +1,23 @@
 #include "main.h"
 
-int PS1(void)
+/**
+ * PS1 - Prints $ prompter to stdout
+ * Return: None. Always vid.
+ *
+ */
+
+void PS1(void)
 {
 	_putchar('$');
-	return (1);
 }
 
-int PS2(void)
+/**
+ * PS2 - Prints > interactive mode
+ * Return: none. always void.
+ *
+ */
+
+void PS2(void)
 {
 	_putchar('>');
-	return (2);
 }

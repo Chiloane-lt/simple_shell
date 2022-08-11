@@ -19,4 +19,6 @@ void *_calloc(unsigned int nmemb, int size);
 
 int execute(char **cmd);
 char *read_cmd(void);
+void PS1(void);
+void PS2(void);
 #endif
