@@ -1,4 +1,6 @@
 #include "main.h"
+#include <sys/types.h>
+#include <sys/wait.h>
 
 /**
 * execute - executes the command
@@ -9,9 +11,6 @@ int execute(char **cmd)
 {
   pid_t child_pid;
   int status;
-  
-  if (_strncmp("exit", cmd[0], 4) == 0)
-    return (-1);
   
   child_pid = fork();
   
