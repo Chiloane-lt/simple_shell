@@ -10,6 +10,5 @@ int main(int argc, char **argv);
 int execute(char **cmd);
 int _putchar(char c);
 int _strlen(const char *s);
-int exit_check(char *s);
 char *read_cmd(void);
 #endif
