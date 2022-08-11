@@ -4,6 +4,10 @@
 
 /**
  * main - Program entry point.
+ * @argc: number of arguments passed to main
+ * @argv: pointer to arguments string
+ *
+ *Return: interger exit value
  * Description - simple shell that prints a prompt,
  * reads user input commands and processes them.
  */
@@ -21,7 +25,7 @@ int main(int argc, char *argv[])
 		command = read_cmd();
 
 		/*check if no input*/
-		if(!command)
+		if (!command)
 		{
 			exit(EXIT_SUCCESS);
 		}
@@ -33,11 +37,9 @@ int main(int argc, char *argv[])
 			break;
 		}
 
-		_puts(command);
-
 		free(command);
 
-	}while(1);
+	} while (1);
 
 	exit(EXIT_SUCCESS);
 }

@@ -22,6 +22,7 @@ int _putchar(char c)
 int _strlen(const char *s)
 {
 	int i = 0;
+
 	while (s[i])
 		i++;
 	return (i);
@@ -92,6 +93,7 @@ int _strcmp(const char *s1, const char *s2)
 void _puts(char *str)
 {
 	int i = 0;
+
 	while (str[i])
 	{
 		_putchar(str[i]);
