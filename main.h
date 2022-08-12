@@ -20,8 +20,11 @@ int _strlen(const char *s);
 char *_memset(char *s, char b, unsigned int n);
 void *_calloc(unsigned int nmemb, int size);
 
+/*Shell.c functions*/
+void env(void);
 int execute(char **cmd);
 char **tokenise(char *command);
 char *reader(void);
 void pointer(void);
+
 #endif
