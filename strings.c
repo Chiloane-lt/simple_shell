@@ -1,3 +1,4 @@
+#include "main.h"
 #include <unistd.h>
 
 /**
@@ -11,7 +12,6 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-#include "main.h"
 
 /**
 * _strlen - find length of string
@@ -82,7 +82,6 @@ int _strcmp(const char *s1, const char *s2)
 	}
 	return (1);
 }
-#include "main.h"
 
 /**
 * _puts - prints a string

@@ -19,7 +19,13 @@ int main(int argc, char *argv[])
 	char **cmd;
 	char *str = "exit\n", *str1 = "env\n";
 
+	/*use exit codes to clear screen*/
+	clear();
 
+	printf("WELCOME PANCAKES");
+
+	/*print welcome message, incl. shell name*/	
+	
 	do {
 		/*print prompt*/
 		pointer();
@@ -44,6 +50,8 @@ int main(int argc, char *argv[])
 		{
 			env();
 		}
+
+		/*Add clear command*/
 
 		/*tokenise(command);*/
 		/*execute here*/

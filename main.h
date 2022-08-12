@@ -21,7 +21,9 @@ char *_memset(char *s, char b, unsigned int n);
 void *_calloc(unsigned int nmemb, int size);
 
 /*Shell.c functions*/
+void clear(void);
 void env(void);
+char *find_p(void);
 int execute(char **cmd);
 char **tokenise(char *command);
 char *reader(void);
