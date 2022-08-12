@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,7 +17,8 @@ int main(int argc, char *argv[])
 {
 	char *command;
 	char **cmd;
-	char *str = "exit\n";
+	char *str = "exit\n", *str1 = "env\n";
+
 
 	do {
 		/*print prompt*/
@@ -36,6 +38,11 @@ int main(int argc, char *argv[])
 		{
 			free(command);
 			break;
+		}
+
+		if (_strcmp(command, str1) == 1)
+		{
+			env();
 		}
 
 		/*tokenise(command);*/
