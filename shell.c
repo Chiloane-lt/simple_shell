@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
 {
 	char *command;
 	char **cmd;
-	char *str = "exit\n";
+	char *str = "exit\n", *str2 = "env\n";
+
 
 	do {
 		/*print prompt*/
@@ -36,6 +37,12 @@ int main(int argc, char *argv[])
 		{
 			free(command);
 			break;
+		}
+
+		if (_strcmp(command, str1) == 1)
+		{
+			env();
+			/*Not sure whether to break or continue ot leave alone*/
 		}
 
 		/*tokenise(command);*/
