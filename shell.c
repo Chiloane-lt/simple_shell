@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	/*use exit codes to clear screen*/
 	clear();
 
-	printf("WELCOME PANCAKES");
+	printf("WELCOME PANCAKES\n");
 
 	/*print welcome message, incl. shell name*/	
 	

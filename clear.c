@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * clear - Clears the STDIO
@@ -8,8 +9,10 @@
 
 void clear(void)
 {
-	const char *stroke_c[] = "\033[H\033[J";
-	write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, 12);
+	char ANSI_C[] = "\033[H\033[J";
+	char *stroke_c;
+	stroke_c = ANSI_C;
+
+	_puts(stroke_c);	
 	
 }
-
