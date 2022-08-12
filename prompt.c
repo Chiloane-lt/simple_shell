@@ -9,16 +9,16 @@
 
 void pointer(void)
 {
+	char *ptr = "$ ";
+
 	/*Interactive mode*/
 	if (isatty(STDIN_FILENO) == 1)
 	{
-		char *ptr = "$";
-
-		_putchar(ptr);
+		_puts(ptr);
 	}
 	else
 	{
 		/*non-interactive mode*/
-		_puts('($)');
+		_puts(ptr);
 	}
 }
