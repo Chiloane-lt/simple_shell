@@ -23,5 +23,4 @@ void env(void)
 		_putchar('\n');
 	}
 
-	_putchar('\n');
 }

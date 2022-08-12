@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+extern char **environ;
  
 int printPATH(void)
 {
-	    const char *name = "PATH";
-	    const char *env_p = getenv(name);
+	    const char **environment = environ;
 	
-	    if (env_p)
+	    while (*environment != NULL)
 	    {
-		    printf("%s = %s\n", name, env_p);
+		    if (ifff)
 	    }
 
 	    return (0);

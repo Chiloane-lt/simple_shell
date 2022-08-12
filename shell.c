@@ -43,9 +43,6 @@ int main(int argc, char *argv[])
 		if (_strcmp(command, str1) == 1)
 		{
 			env();
-			/**find statement similar to break*/
-			/* restart loop*/
-			/* Not sure whether to break or continue ot leave alone*/
 		}
 
 		/*tokenise(command);*/

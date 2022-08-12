@@ -54,7 +54,7 @@ char *_strcpy(char *dest, const char *src)
  *
  * Return: 1 if strings are the equal
  * Returns -1 if they are different
- * Returns 1 if s1 or s2 is NULL
+ * Returns 0 if s1 or s2 is NULL
  */
 int _strcmp(const char *s1, const char *s2)
 {
