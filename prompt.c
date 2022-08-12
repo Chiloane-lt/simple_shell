@@ -12,13 +12,13 @@ void pointer(void)
 	/*Interactive mode*/
 	if (isatty(STDIN_FILENO) == 1)
 	{
-		char *ptr = "($)";
+		char *ptr = "$";
 
-		_puts(ptr);
+		_putchar(ptr);
 	}
 	else
 	{
 		/*non-interactive mode*/
-		_putchar('$');
+		_puts('($)');
 	}
 }
