@@ -1,6 +1,10 @@
 #include "main.h"
 
 /**
+ * split - Tokenises a string and returns a
+ * double pointer to the tokens
+ * @command: pointer to take in
+ * Return: double pointer to tokens
  */	
 
 char **split(char *command)

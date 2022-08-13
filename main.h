@@ -12,6 +12,7 @@
 /*Functions to handel strings*/
 void _puts(char *str);
 int _strcmp(const char *s1, const char *s2);
+int _strncmp(char *s1, char *s2, size_t n);
 char *_strcpy(char *dest, const char *src);
 int _putchar(char c);
 int _strlen(const char *s);
