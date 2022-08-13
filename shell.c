@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	printf("WELCOME PANCAKES\n");
 	do {
 		pointer();
-		command = reader();
+		command = rdline();
 
 		if (!command)
 		{
@@ -44,8 +44,8 @@ int main(int argc, char *argv[])
 
 		/*Add clear command*/
 
-		/*tokenise(command);*/
-		/*execute here*/
+		cmd = split(command);
+		execute(cmd);
 
 		free(command);
 

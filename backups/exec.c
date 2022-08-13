@@ -21,14 +21,22 @@ int execute(char **cmd)
 	}
 	else if (child_pid == 0)
 	{
-		if (execve(cmd[0], cmd, NULL) == -1)
+		/**
+		 * Replace with execv*/
+		if (execvp(cmd[0], cmd) == -1)
 		{
 			perror("Error");
-			exit(-1);
 		}
+
+		exit(EXIT_FAILURE);
 	}
 	else
-		wait(&status);
+	{
+		do {
+			waitpid(child_pid, &status, WUNTRACED);
+		}
+		while (!WIFEXITED(status) && (!WIFSIGNALED(status)));
+	}
 
 	return (0);
 }

@@ -28,7 +28,7 @@ void env(void);
 char *find_p(void);
 int execute(char **cmd);
 char **tokenise(char *command);
-char *reader(void);
+char *rdline(void);
 void pointer(void);
 
 #endif

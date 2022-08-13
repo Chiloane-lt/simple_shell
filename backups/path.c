@@ -16,10 +16,15 @@ extern char **environ;
  
 char *find_p(void)
 {
+	    int c;
+	    
 	    char **environment = environ;
 	    char pathSTR[] = "PATH=";
 	    char *s2 = pathSTR;
-	    int c;
+
+	    char delim[] = ":";
+	    char *path;
+	    char **path_t = malloc(sizeof(char *) * 1024);
 
 	    while (*environment != NULL)
 	    {
@@ -27,9 +32,10 @@ char *find_p(void)
 		    
 		    if (c == 0)
 		    {
-			    _puts(*environment);
-			    _putchar('\n');
-			    return (*environment);
+			    /*put into pointer called path*/
+			    /*tokenise path into double pointer called path_t*/
+
+			    return (*path);
 		    }
 
 		    *environment++;

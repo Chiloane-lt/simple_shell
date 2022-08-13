@@ -8,7 +8,7 @@
  * Return: TBD.
  */
 
-char *reader(void)
+char *rdline(void)
 {
 	char *command = NULL;
 	char *newline = "\n";
