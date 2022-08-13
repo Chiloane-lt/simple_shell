@@ -19,27 +19,18 @@ int main(int argc, char *argv[])
 	char **cmd;
 	char *str = "exit\n", *str1 = "env\n";
 
-	/*use exit codes to clear screen*/
 	clear();
 
 	printf("WELCOME PANCAKES\n");
-
-	/*print welcome message, incl. shell name*/	
-	
 	do {
-		/*print prompt*/
 		pointer();
-
-		/*read input command*/
 		command = reader();
 
-		/*check if no input*/
 		if (!command)
 		{
 			exit(EXIT_SUCCESS);
 		}
 
-		/*close shell if input command is "exit"*/
 		if (_strcmp(command, str) == 1)
 		{
 			free(command);
